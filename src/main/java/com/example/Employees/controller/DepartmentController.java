@@ -41,7 +41,7 @@ public class DepartmentController {
     @GetMapping("/all")
     public Map<String, List<Employee>> getAllEmployeesByDepartment(@RequestParam(value = "departmentId", required = false) String department) {
         if (department == null) {
-            return departmentService.getAllEmployeesByDepartment(department);
+            return departmentService.getAllEmployeesByDepartments();
         }
         return departmentService.getAllEmployeesByDepartment(department);
     }

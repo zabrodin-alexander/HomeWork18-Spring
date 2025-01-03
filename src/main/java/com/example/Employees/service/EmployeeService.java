@@ -9,7 +9,7 @@ import java.util.Map;
 
 @Service
 public class EmployeeService {
-    private static Map<String, Employee> employees;
+    private  Map<String, Employee> employees;
 
     public EmployeeService() {
         employees = new HashMap<>();
@@ -34,7 +34,7 @@ public class EmployeeService {
         return new ArrayList<>(employees.values());
     }
 
-    public static void addTestData() {
+    public  void addTestData() {
         employees.put("Иванов", new Employee("Иван", "Иванов", 25000, "1"));
         employees.put("Петров", new Employee("Петр", "Петров", 40000, "1"));
         employees.put("Сидоров", new Employee("Егор", "Сидоров", 85000, "2"));
